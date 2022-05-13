@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "876431149558",
+    "project_id": "triple-g-cycle",
+    "storage_bucket": "triple-g-cycle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876431149558:android:08b8462ff4186db375dfd7",
+        "android_client_info": {
+          "package_name": "com.maad.triple_gcycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876431149558-hh188047jsecrrt7qosremna070jvidb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-IjrLqHHfJU5IWB6RN7JLAQf24NfGurU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876431149558-hh188047jsecrrt7qosremna070jvidb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
