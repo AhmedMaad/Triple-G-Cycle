@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Triple-G Cycle</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="sign_in"><u>Want to Sign in?</u></string>
+    <string name="sign_up"><u>Want to Join Us?</u></string>
 </resources>

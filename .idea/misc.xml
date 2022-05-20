@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_login_bk.xml" value="0.1455" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/login_button_bk.xml" value="0.1455" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/login_shape_bk.xml" value="0.1455" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_home.xml" value="0.1921875" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_sign_in.xml" value="0.1921875" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_welcome.xml" value="0.1921875" />
       </map>
     </option>
   </component>
