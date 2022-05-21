@@ -10,6 +10,10 @@ class PointsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityPointsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //send "status = pending" by default to any point
+        //show text view with animation
+
     }
 
 }

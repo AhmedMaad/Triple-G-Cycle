@@ -4,6 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".citizen.PointsActivity">
+
+    <ImageView
+        android:id="@+id/half_square_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/half_square"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offers_tv"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
+        app:layout_constraintEnd_toEndOf="@id/half_square_iv"
+        app:layout_constraintStart_toStartOf="@id/half_square_iv"
+        app:layout_constraintTop_toTopOf="@id/half_square_iv"
+        tools:text="My Points" />
+
+    <LinearLayout
+        android:id="@+id/approved_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/rejected_container"
+        app:layout_constraintTop_toBottomOf="@id/half_square_iv">
+
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approved Points"
+            android:textColor="@color/green" />
+
+        <TextView
+            android:id="@+id/approved_tv"
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/green"
+            tools:text="50" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rejected_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/pending_container"
+        app:layout_constraintTop_toBottomOf="@id/approved_container">
+
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejected Points"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/rejected_tv"
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_red_dark"
+            tools:text="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pending_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rejected_container">
+
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending Points"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/pending_tv"
+            style="@style/TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/darker_gray"
+            tools:text="20" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
