@@ -13,7 +13,7 @@
             android:name=".factory.RequestsActivity"
             android:exported="false" />
         <activity
-            android:name=".citizen.OffersActivity"
+            android:name=".citizen.offer.OffersActivity"
             android:exported="false" />
         <activity
             android:name=".citizen.PointsActivity"
