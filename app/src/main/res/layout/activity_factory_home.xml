@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
         app:layout_constraintStart_toStartOf="@id/half_square_iv"
         app:layout_constraintTop_toTopOf="@id/half_square_iv"
-        tools:text="Factory" />
+        android:text="Factory" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/request_cv"

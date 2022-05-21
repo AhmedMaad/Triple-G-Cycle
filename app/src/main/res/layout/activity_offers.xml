@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
         app:layout_constraintStart_toStartOf="@id/half_square_iv"
         app:layout_constraintTop_toTopOf="@id/half_square_iv"
-        tools:text="Offers" />
+        android:text="Offers" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/offers_rv"

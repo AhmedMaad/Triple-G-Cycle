@@ -10,6 +10,9 @@ class RequestsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityRequestsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
     }
 
 }

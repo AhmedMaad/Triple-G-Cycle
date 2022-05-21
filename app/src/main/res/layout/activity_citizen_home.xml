@@ -16,14 +16,14 @@
 
     <TextView
         android:id="@+id/user_type_tv"
+        style="@style/TextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Citizen"
         app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
         app:layout_constraintStart_toStartOf="@id/half_square_iv"
-        app:layout_constraintTop_toTopOf="@id/half_square_iv"
-        tools:text="Citizen"
-        style="@style/TextTitle" />
+        app:layout_constraintTop_toTopOf="@id/half_square_iv" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/request_cv"
