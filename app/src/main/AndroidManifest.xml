@@ -10,13 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripleGCycle">
         <activity
-            android:name=".HomeActivity"
+            android:name=".factory.RequestsActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".citizen.OffersActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".citizen.PointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appprovider.AppProviderHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bank.BankHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ministry.MinistryHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.CitizenHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.SignUpActivity"
             android:exported="false" />
 
         <meta-data
@@ -28,7 +46,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".register.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

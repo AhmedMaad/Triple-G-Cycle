@@ -1,4 +1,6 @@
-package com.maad.triple_gcycle
+package com.maad.triple_gcycle.citizen
+
+import com.maad.triple_gcycle.factory.User
 
 class Citizen(
     val points: Int = 0,

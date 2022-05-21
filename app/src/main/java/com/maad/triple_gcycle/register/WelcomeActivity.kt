@@ -1,20 +1,21 @@
-package com.maad.triple_gcycle
+package com.maad.triple_gcycle.register
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.maad.triple_gcycle.databinding.ActivitySignInBinding
+import android.os.Handler
+import android.os.Looper
+import com.maad.triple_gcycle.R
 
-class SignInActivity : AppCompatActivity() {
+class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_welcome)
 
-        binding.signUpTv.setOnClickListener {
+        Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, SignUpActivity::class.java))
             finish()
-        }
+        }, 5000)
 
     }
 }

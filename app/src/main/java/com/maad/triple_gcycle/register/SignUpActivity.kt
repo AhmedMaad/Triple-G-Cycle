@@ -1,4 +1,4 @@
-package com.maad.triple_gcycle
+package com.maad.triple_gcycle.register
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivitySignUpBinding
+import com.maad.triple_gcycle.factory.User
+import com.maad.triple_gcycle.citizen.CitizenHomeActivity
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -48,11 +50,17 @@ class SignUpActivity : AppCompatActivity() {
                             prefs.putString("type", type)
                             prefs.apply()
                             val user = User(userId, email, type)
-                            db.collection("users").add(user).addOnSuccessListener {
+                            db.collection("users").document(userId).set(user).addOnSuccessListener {
+                                Toast.makeText(this, "Welcome to the community!", Toast.LENGTH_LONG)
+                                    .show()
                                 when (type) {
-                                    "Citizen", "Factory" -> {
-                                        startActivity(Intent(this, HomeActivity::class.java))
-                                        finish()
+                                    "Citizen" -> {
+                                        startActivity(Intent(this, CitizenHomeActivity::class.java))
+                                        finishAffinity()
+                                    }
+                                    "Factory" -> {
+                                        startActivity(Intent(this, CitizenHomeActivity::class.java))
+                                        finishAffinity()
                                     }
                                 }
 
