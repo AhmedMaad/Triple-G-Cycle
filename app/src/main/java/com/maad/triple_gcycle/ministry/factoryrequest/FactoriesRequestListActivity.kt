@@ -33,7 +33,7 @@ class FactoriesRequestListActivity : AppCompatActivity(), RequestAdapter.ItemCli
         super.onResume()
         pendingRequests.clear()
         db.collection("requests").get().addOnSuccessListener {
-            val requests = it.toObjects(FactoryRequest::class.java)
+            val requests = it.toObjects(Request::class.java)
             for (request in requests)
                 if (request.pointStatus == "Pending" && request.userType == "Factory")
                     pendingRequests.add(request)

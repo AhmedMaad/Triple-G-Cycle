@@ -10,6 +10,6 @@ class FactoryRequest(
     lon: Double = 0.0,
     details: String = "",
     destination: String = "",
-    val day: String = "",
-    val time: String = ""
+    var day: String = "",
+    var time: String = ""
 ) : Request(userId, userType, image, lat, lon, details, destination)
