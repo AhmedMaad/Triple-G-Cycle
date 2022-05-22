@@ -3,4 +3,5 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="sign_in"><u>Want to Sign in?</u></string>
     <string name="sign_up"><u>Want to Join Us?</u></string>
+    <string name="show_location"><u>Show Location</u></string>
 </resources>

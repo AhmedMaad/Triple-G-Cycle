@@ -11,7 +11,7 @@ class PointsActivity : AppCompatActivity() {
         val binding = ActivityPointsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //send "status = pending" by default to any point
+        //check user_id when returning th points
         //show text view with animation
 
     }

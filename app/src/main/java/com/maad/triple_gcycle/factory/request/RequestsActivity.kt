@@ -104,6 +104,7 @@ class RequestsActivity : AppCompatActivity() {
                 Toast.makeText(this, "Thanks for saving earth", Toast.LENGTH_SHORT).show()
                 //hide dialog
                 requestDialog.dismiss()
+                finish()
             }
         }
 

@@ -1,4 +1,4 @@
-package com.maad.triple_gcycle.ministry
+package com.maad.triple_gcycle.ministry.factoryrequest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,5 +9,8 @@ class FactoriesRequestListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityRequestListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //hide progress bar after receiving data that has status "pending"
+
     }
 }

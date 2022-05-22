@@ -13,6 +13,7 @@ import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivitySignUpBinding
 import com.maad.triple_gcycle.factory.User
 import com.maad.triple_gcycle.citizen.CitizenHomeActivity
+import com.maad.triple_gcycle.factory.FactoryHomeActivity
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -59,7 +60,7 @@ class SignUpActivity : AppCompatActivity() {
                                         finishAffinity()
                                     }
                                     "Factory" -> {
-                                        startActivity(Intent(this, CitizenHomeActivity::class.java))
+                                        startActivity(Intent(this, FactoryHomeActivity::class.java))
                                         finishAffinity()
                                     }
                                 }

@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.maad.triple_gcycle.databinding.ActivityMinistryHomeBinding
+import com.maad.triple_gcycle.ministry.citizenrequest.CitizensRequestListActivity
+import com.maad.triple_gcycle.ministry.factoryrequest.FactoriesRequestListActivity
 
 class MinistryHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

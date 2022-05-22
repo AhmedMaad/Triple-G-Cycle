@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripleGCycle">
         <activity
-            android:name=".ministry.FactoriesRequestListActivity"
+            android:name=".ministry.factoryrequest.FactoriesRequestListActivity"
             android:exported="false" />
         <activity
-            android:name=".ministry.CitizensRequestListActivity"
+            android:name=".ministry.citizenrequest.CitizensRequestListActivity"
             android:exported="false" />
         <activity
             android:name=".factory.request.RequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".factory.FactoryHomeActivity"
             android:exported="false" />
         <activity
             android:name=".citizen.offer.OffersActivity"
