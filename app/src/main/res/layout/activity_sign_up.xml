@@ -123,8 +123,8 @@
                 </RadioGroup>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    style="@style/BtnStyle"
                     android:id="@+id/sign_up_btn"
+                    style="@style/BtnStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign Up" />

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripleGCycle">
         <activity
-            android:name=".factory.RequestsActivity"
+            android:name=".factory.request.RequestsActivity"
             android:exported="false" />
         <activity
             android:name=".citizen.offer.OffersActivity"
@@ -42,7 +42,7 @@
             android:value="AIzaSyCU18KbbXIi9xXloZa4VLuOLntjpKGekfU" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".factory.request.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
