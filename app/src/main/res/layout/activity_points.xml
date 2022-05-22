@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".citizen."
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".citizen.">
 
     <ImageView
         android:id="@+id/half_square_iv"
@@ -20,11 +20,11 @@
         style="@style/TextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="My Points"
         app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
         app:layout_constraintStart_toStartOf="@id/half_square_iv"
-        app:layout_constraintTop_toTopOf="@id/half_square_iv"
-        android:text="My Points" />
+        app:layout_constraintTop_toTopOf="@id/half_square_iv" />
 
     <LinearLayout
         android:id="@+id/approved_container"
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@color/green"
-            tools:text="50" />
+            android:text="0"
+            android:textColor="@color/green" />
 
     </LinearLayout>
 
@@ -73,8 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@android:color/holo_red_dark"
-            tools:text="3" />
+            android:text="0"
+            android:textColor="@android:color/holo_red_dark" />
 
     </LinearLayout>
 
@@ -99,8 +99,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@android:color/darker_gray"
-            tools:text="20" />
+            android:text="0"
+            android:textColor="@android:color/darker_gray" />
 
     </LinearLayout>
 
