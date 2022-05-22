@@ -11,6 +11,7 @@ class FactoriesRequestListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //hide progress bar after receiving data that has status "pending"
+        //check status "pending" and "request type" is for userType
 
     }
 }
