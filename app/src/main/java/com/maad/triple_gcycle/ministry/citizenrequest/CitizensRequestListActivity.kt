@@ -5,17 +5,20 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityRequestListBinding
 import com.maad.triple_gcycle.factory.request.Request
 import com.maad.triple_gcycle.ministry.RequestAdapter
+import kotlin.random.Random
 
 class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClickListener {
 
     private lateinit var db: FirebaseFirestore
     private val pendingRequests = arrayListOf<Request>()
+    private lateinit var adapter: RequestAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +32,7 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
                 if (request.pointStatus == "Pending" && request.userType == "Citizen")
                     pendingRequests.add(request)
 
-            val adapter = RequestAdapter(this, pendingRequests, this)
+            adapter = RequestAdapter(this, pendingRequests, this)
             binding.requestsRv.adapter = adapter
             binding.progress.visibility = View.GONE
 
@@ -39,6 +42,21 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
 
     override fun onApproveButtonClick(position: Int) {
         //delete item from list and change pointsstatus to "Approved"
+        db.collection("requests").document(pendingRequests[position].requestId)
+            .update("pointStatus", "Approved").addOnSuccessListener {
+                sendMoney(position)
+            }
+    }
+
+    private fun sendMoney(position: Int) {
+        val data = HashMap<String, Double>()
+        data["money"] = Random.nextDouble(200.00, 1000.00) //until 999.9999
+        db.collection("bank").add(data).addOnSuccessListener {
+            pendingRequests.removeAt(position)
+            adapter.notifyItemRemoved(position)
+            Toast.makeText(this, "Request Approved", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     override fun onRejectBtnClick(position: Int) {
