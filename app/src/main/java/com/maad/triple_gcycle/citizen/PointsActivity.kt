@@ -22,9 +22,6 @@ class PointsActivity : AppCompatActivity() {
         setContentView(binding.root)
         db = Firebase.firestore
 
-        //check user_id when returning th points
-        //show text view with animation
-
         val prefs = getSharedPreferences("data", MODE_PRIVATE)
         val userId = prefs.getString("id", null)!!
 
@@ -42,29 +39,20 @@ class PointsActivity : AppCompatActivity() {
                         "Pending" -> ++pendingCounter
                     }
 
-            val animator = ValueAnimator.ofInt(0, pendingCounter)
-            animator.duration = 3000
-            animator.addUpdateListener { animation ->
-                binding.pendingTv.text = animation.animatedValue.toString()
-            }
-            animator.start()
-
-            val animator2 = ValueAnimator.ofInt(0, rejectedCounter)
-            animator2.duration = 2500
-            animator2.addUpdateListener { animation ->
-                binding.rejectedTv.text = animation.animatedValue.toString()
-            }
-            animator2.start()
-
-            val animator3 = ValueAnimator.ofInt(0, approvedCounter)
-            animator3.duration = 2000
-            animator3.addUpdateListener { animation ->
-                binding.approvedTv.text = animation.animatedValue.toString()
-            }
-            animator3.start()
+            textAnimation(approvedCounter, 2000, binding.approvedTv)
+            textAnimation(rejectedCounter, 2500, binding.rejectedTv)
+            textAnimation(pendingCounter, 3000, binding.pendingTv)
 
         }
 
     }
+
+    fun textAnimation(counter: Int, duration: Int, text: TextView) {
+        val animator = ValueAnimator.ofInt(0, counter)
+        animator.duration = duration.toLong()
+        animator.addUpdateListener { animation -> text.text = animation.animatedValue.toString() }
+        animator.start()
+    }
+
 
 }
