@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.maad.triple_gcycle.databinding.ActivityFactoryHomeBinding
-import com.maad.triple_gcycle.factory.request.RequestsActivity
+import com.maad.triple_gcycle.request.RequestsActivity
 
 class FactoryHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

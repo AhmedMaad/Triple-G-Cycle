@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.maad.triple_gcycle.citizen.offer.OffersActivity
 import com.maad.triple_gcycle.databinding.ActivityCitizenHomeBinding
-import com.maad.triple_gcycle.factory.request.RequestsActivity
+import com.maad.triple_gcycle.request.RequestsActivity
 
 class CitizenHomeActivity : AppCompatActivity() {
 

@@ -1,10 +1,9 @@
-package com.maad.triple_gcycle.factory.request
+package com.maad.triple_gcycle.request
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
@@ -14,6 +13,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 import com.maad.triple_gcycle.databinding.ActivityRequestsBinding
+import com.maad.triple_gcycle.factory.FactoryRequest
 import java.util.*
 
 class RequestsActivity : AppCompatActivity() {
@@ -68,7 +68,6 @@ class RequestsActivity : AppCompatActivity() {
     }
 
     private fun uploadImage() {
-        //show dialog
         requestDialog.show(supportFragmentManager, null)
         requestDialog.isCancelable = false
         val now = Calendar.getInstance()
@@ -97,12 +96,30 @@ class RequestsActivity : AppCompatActivity() {
         val destinationRB: RadioButton = findViewById(binding.destinationGroup.checkedRadioButtonId)
         val destination = destinationRB.text.toString()
 
-        val request = Request(userId, userType, picture.toString(), lat, lon, details, destination)
+        val request = when (userType) {
+            "Citizen" -> Request(
+                userId,
+                userType,
+                picture.toString(),
+                lat,
+                lon,
+                details,
+                destination
+            )
+            else -> FactoryRequest(
+                userId,
+                userType,
+                picture.toString(),
+                lat,
+                lon,
+                details,
+                destination
+            )
+        }
 
         db.collection("requests").add(request).addOnSuccessListener {
             it.update("requestId", it.id).addOnSuccessListener {
                 Toast.makeText(this, "Thanks for saving earth", Toast.LENGTH_SHORT).show()
-                //hide dialog
                 requestDialog.dismiss()
                 finish()
             }

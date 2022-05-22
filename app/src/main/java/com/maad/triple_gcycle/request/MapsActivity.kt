@@ -1,4 +1,4 @@
-package com.maad.triple_gcycle.factory.request
+package com.maad.triple_gcycle.request
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

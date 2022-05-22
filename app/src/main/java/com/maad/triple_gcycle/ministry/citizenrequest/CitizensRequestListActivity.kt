@@ -10,7 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityRequestListBinding
-import com.maad.triple_gcycle.factory.request.Request
+import com.maad.triple_gcycle.request.Request
 import com.maad.triple_gcycle.ministry.RequestAdapter
 import kotlin.random.Random
 
@@ -41,7 +41,6 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
     }
 
     override fun onApproveButtonClick(position: Int) {
-        //delete item from list and change pointsstatus to "Approved"
         db.collection("requests").document(pendingRequests[position].requestId)
             .update("pointStatus", "Approved").addOnSuccessListener {
                 sendMoney(position)
@@ -60,7 +59,10 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
     }
 
     override fun onRejectBtnClick(position: Int) {
-        //delete item from list and change pointsstatus to "Rejected"
+        db.collection("requests").document(pendingRequests[position].requestId)
+            .update("pointStatus", "Rejected").addOnSuccessListener {
+                sendMoney(position)
+            }
     }
 
     override fun onLocationClick(position: Int) {

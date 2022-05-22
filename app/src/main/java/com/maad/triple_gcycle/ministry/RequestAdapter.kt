@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.maad.triple_gcycle.R
-import com.maad.triple_gcycle.factory.request.Request
+import com.maad.triple_gcycle.request.Request
 
 class RequestAdapter(
     val activity: Activity,

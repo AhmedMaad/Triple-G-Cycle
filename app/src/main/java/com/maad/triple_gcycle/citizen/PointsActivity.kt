@@ -2,14 +2,13 @@ package com.maad.triple_gcycle.citizen
 
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityPointsBinding
-import com.maad.triple_gcycle.factory.request.Request
+import com.maad.triple_gcycle.request.Request
 
 
 class PointsActivity : AppCompatActivity() {

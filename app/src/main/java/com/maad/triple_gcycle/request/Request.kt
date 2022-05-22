@@ -1,6 +1,6 @@
-package com.maad.triple_gcycle.factory.request
+package com.maad.triple_gcycle.request
 
-class Request(
+open class Request(
     val userId: String = "",
     val userType: String = "",
     val image: String = "",
