@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -12,12 +13,14 @@ import com.maad.triple_gcycle.databinding.ActivityRequestListBinding
 import com.maad.triple_gcycle.factory.FactoryRequest
 import com.maad.triple_gcycle.request.Request
 import com.maad.triple_gcycle.ministry.RequestAdapter
+import kotlin.random.Random
 
 class FactoriesRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClickListener {
 
     private lateinit var db: FirebaseFirestore
     private val pendingRequests = arrayListOf<Request>()
     private lateinit var binding: ActivityRequestListBinding
+    private lateinit var adapter: RequestAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,18 +38,25 @@ class FactoriesRequestListActivity : AppCompatActivity(), RequestAdapter.ItemCli
                 if (request.pointStatus == "Pending" && request.userType == "Factory")
                     pendingRequests.add(request)
 
-            val adapter = RequestAdapter(this, pendingRequests, this)
+            adapter = RequestAdapter(this, pendingRequests, this)
             binding.requestsRv.adapter = adapter
             binding.progress.visibility = View.GONE
         }
     }
 
     override fun onApproveButtonClick(position: Int) {
-
+        val i = Intent(this, DayTimeActivity::class.java)
+        i.putExtra("request", pendingRequests[position])
+        startActivity(i)
     }
 
     override fun onRejectBtnClick(position: Int) {
-
+        db.collection("requests").document(pendingRequests[position].requestId)
+            .update("pointStatus", "Rejected").addOnSuccessListener {
+                pendingRequests.removeAt(position)
+                adapter.notifyItemRemoved(position)
+                Toast.makeText(this, "Request Rejected", Toast.LENGTH_SHORT).show();
+            }
     }
 
     override fun onLocationClick(position: Int) {

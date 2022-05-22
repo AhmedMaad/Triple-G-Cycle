@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripleGCycle">
         <activity
+            android:name=".factory.ComingMinistryListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ministry.factoryrequest.DayTimeActivity"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".ministry.citizenrequest.CitizensRequestListActivity"
             android:exported="false" />
         <activity
-            android:name="com.maad.triple_gcycle.request.RequestsActivity"
+            android:name=".request.RequestsActivity"
             android:exported="false" />
         <activity
             android:name=".factory.FactoryHomeActivity"
@@ -54,7 +57,7 @@
             android:value="AIzaSyCU18KbbXIi9xXloZa4VLuOLntjpKGekfU" />
 
         <activity
-            android:name="com.maad.triple_gcycle.request.MapsActivity"
+            android:name=".request.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity

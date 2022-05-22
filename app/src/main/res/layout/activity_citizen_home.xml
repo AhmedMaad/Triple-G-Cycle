@@ -38,6 +38,8 @@
         app:layout_constraintTop_toBottomOf="@id/half_square_iv">
 
         <TextView
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ic_request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -62,6 +64,8 @@
         app:layout_constraintTop_toBottomOf="@id/request_cv">
 
         <TextView
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ic_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -85,6 +89,8 @@
         app:layout_constraintTop_toBottomOf="@id/points_cv">
 
         <TextView
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ic_offer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

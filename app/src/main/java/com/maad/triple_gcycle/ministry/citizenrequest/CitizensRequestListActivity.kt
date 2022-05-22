@@ -53,7 +53,7 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
         db.collection("bank").add(data).addOnSuccessListener {
             pendingRequests.removeAt(position)
             adapter.notifyItemRemoved(position)
-            Toast.makeText(this, "Request Approved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Request approved, and money sent to bank", Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -61,7 +61,9 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
     override fun onRejectBtnClick(position: Int) {
         db.collection("requests").document(pendingRequests[position].requestId)
             .update("pointStatus", "Rejected").addOnSuccessListener {
-                sendMoney(position)
+                pendingRequests.removeAt(position)
+                adapter.notifyItemRemoved(position)
+                Toast.makeText(this, "Request Rejected", Toast.LENGTH_SHORT).show()
             }
     }
 

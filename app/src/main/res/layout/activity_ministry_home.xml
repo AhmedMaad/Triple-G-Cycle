@@ -17,10 +17,10 @@
     <TextView
         android:id="@+id/user_type_tv"
         style="@style/TextTitle"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
@@ -44,10 +44,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:drawablePadding="16dp"
             android:text="Citizens Requests"
             android:textColor="@color/green"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_person" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -67,10 +69,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:drawablePadding="16dp"
             android:text="Factories Requests"
             android:textColor="@color/green"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_factory" />
 
     </com.google.android.material.card.MaterialCardView>
 

@@ -1,5 +1,9 @@
 package com.maad.triple_gcycle.request
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 open class Request(
     val userId: String = "",
     val userType: String = "",
@@ -9,5 +13,5 @@ open class Request(
     val details: String = "",
     val destination: String = "",
     val requestId: String = "",
-    val pointStatus: String = "Pending"
-)
+    var pointStatus: String = "Pending"
+) : Parcelable
