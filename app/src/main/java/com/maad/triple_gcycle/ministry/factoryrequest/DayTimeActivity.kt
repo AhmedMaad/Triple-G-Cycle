@@ -4,7 +4,6 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
@@ -12,7 +11,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityDayTimeBinding
-import com.maad.triple_gcycle.factory.FactoryRequest
 import com.maad.triple_gcycle.request.Request
 import kotlin.random.Random
 
@@ -46,8 +44,7 @@ class DayTimeActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
             if (binding.dayTv.text == "Choose Day" || binding.timeTv.text == "Choose Time")
                 Toast.makeText(this, "Choose both day & time", Toast.LENGTH_SHORT).show()
             else {
-                //TODO cannor cast "may be weill make nre adpter for "FactoryRequest"
-                val request = intent.getParcelableExtra<Request>("request") as FactoryRequest
+                val request = intent.getParcelableExtra<Request>("request")!!
                 request.pointStatus = "Approved"
                 request.day = day
                 request.time = time
@@ -66,6 +63,7 @@ class DayTimeActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         db.collection("bank").add(data).addOnSuccessListener {
             Toast.makeText(this, "Request approved, and money sent to bank", Toast.LENGTH_SHORT)
                 .show()
+            finish()
         }
 
     }

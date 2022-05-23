@@ -13,5 +13,7 @@ open class Request(
     val details: String = "",
     val destination: String = "",
     val requestId: String = "",
-    var pointStatus: String = "Pending"
+    var pointStatus: String = "Pending",
+    var day: String = "",
+    var time: String = ""
 ) : Parcelable

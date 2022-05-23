@@ -29,12 +29,17 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
         db.collection("requests").get().addOnSuccessListener {
             val requests = it.toObjects(Request::class.java)
             for (request in requests)
-                if (request.pointStatus == "Pending" && request.userType == "Citizen")
+                if (request.pointStatus == "Pending" && request.userType == "Citizen"
+                    && request.destination == "Ministry of ${intent.getStringExtra("ministry")}"
+                )
                     pendingRequests.add(request)
 
             adapter = RequestAdapter(this, pendingRequests, this)
             binding.requestsRv.adapter = adapter
             binding.progress.visibility = View.GONE
+
+            if (pendingRequests.isEmpty())
+                Toast.makeText(this, "No pending requests", Toast.LENGTH_SHORT).show();
 
         }
 
@@ -53,7 +58,8 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
         db.collection("bank").add(data).addOnSuccessListener {
             pendingRequests.removeAt(position)
             adapter.notifyItemRemoved(position)
-            Toast.makeText(this, "Request approved, and money sent to bank", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Request approved, and money sent to bank", Toast.LENGTH_SHORT)
+                .show()
         }
 
     }

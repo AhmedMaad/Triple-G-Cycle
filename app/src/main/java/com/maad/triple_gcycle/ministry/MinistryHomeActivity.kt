@@ -17,11 +17,15 @@ class MinistryHomeActivity : AppCompatActivity() {
             "Ministry of ${getSharedPreferences("data", MODE_PRIVATE).getString("type", null)}"
 
         binding.citizenRequestCv.setOnClickListener {
-            startActivity(Intent(this, CitizensRequestListActivity::class.java))
+            val i = Intent(this, CitizensRequestListActivity::class.java)
+            i.putExtra("ministry", intent.getStringExtra("ministry"))
+            startActivity(i)
         }
 
         binding.factoryRequestCv.setOnClickListener {
-            startActivity(Intent(this, FactoriesRequestListActivity::class.java))
+            val i = Intent(this, FactoriesRequestListActivity::class.java)
+            i.putExtra("ministry", intent.getStringExtra("ministry"))
+            startActivity(i)
         }
 
     }

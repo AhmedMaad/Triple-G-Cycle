@@ -10,10 +10,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityRequestListBinding
-import com.maad.triple_gcycle.factory.FactoryRequest
 import com.maad.triple_gcycle.request.Request
 import com.maad.triple_gcycle.ministry.RequestAdapter
-import kotlin.random.Random
 
 class FactoriesRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClickListener {
 
@@ -35,12 +33,18 @@ class FactoriesRequestListActivity : AppCompatActivity(), RequestAdapter.ItemCli
         db.collection("requests").get().addOnSuccessListener {
             val requests = it.toObjects(Request::class.java)
             for (request in requests)
-                if (request.pointStatus == "Pending" && request.userType == "Factory")
+                if (request.pointStatus == "Pending" && request.userType == "Factory"
+                    && request.destination == "Ministry of ${intent.getStringExtra("ministry")}"
+                )
                     pendingRequests.add(request)
 
             adapter = RequestAdapter(this, pendingRequests, this)
             binding.requestsRv.adapter = adapter
             binding.progress.visibility = View.GONE
+
+            if (pendingRequests.isEmpty())
+                Toast.makeText(this, "No pending requests", Toast.LENGTH_SHORT).show();
+
         }
     }
 

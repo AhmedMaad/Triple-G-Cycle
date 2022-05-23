@@ -13,7 +13,6 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 import com.maad.triple_gcycle.databinding.ActivityRequestsBinding
-import com.maad.triple_gcycle.factory.FactoryRequest
 import java.util.*
 
 class RequestsActivity : AppCompatActivity() {
@@ -96,26 +95,7 @@ class RequestsActivity : AppCompatActivity() {
         val destinationRB: RadioButton = findViewById(binding.destinationGroup.checkedRadioButtonId)
         val destination = destinationRB.text.toString()
 
-        val request = when (userType) {
-            "Citizen" -> Request(
-                userId,
-                userType,
-                picture.toString(),
-                lat,
-                lon,
-                details,
-                destination
-            )
-            else -> FactoryRequest(
-                userId,
-                userType,
-                picture.toString(),
-                lat,
-                lon,
-                details,
-                destination
-            )
-        }
+        val request = Request(userId, userType, picture.toString(), lat, lon, details, destination)
 
         db.collection("requests").add(request).addOnSuccessListener {
             it.update("requestId", it.id).addOnSuccessListener {

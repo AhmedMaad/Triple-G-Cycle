@@ -32,7 +32,7 @@ class SignInActivity : AppCompatActivity() {
         binding.signInBtn.setOnClickListener {
             //val email = binding.emailEt.text.toString()
             //val password = binding.passwordEt.text.toString()
-            val email = "health@gmail.com"
+            val email = "f1@gmail.com"
             val password = "123456"
             if (email.isEmpty() || password.isEmpty())
                 Toast.makeText(this, "You forgot to fill the fields", Toast.LENGTH_SHORT).show()
@@ -81,7 +81,9 @@ class SignInActivity : AppCompatActivity() {
                         finishAffinity()
                     }
                     "Health", "Environment" -> {
-                        startActivity(Intent(this, MinistryHomeActivity::class.java))
+                        val i = Intent(this, MinistryHomeActivity::class.java)
+                        i.putExtra("ministry", userType)
+                        startActivity(i)
                         finishAffinity()
                     }
                     "Bank" -> {
