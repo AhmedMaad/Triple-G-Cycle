@@ -16,7 +16,9 @@ class FactoryHomeActivity : AppCompatActivity() {
             startActivity(Intent(this, RequestsActivity::class.java))
         }
 
-        binding.ministryCv.setOnClickListener {  }
+        binding.ministryCv.setOnClickListener {
+            startActivity(Intent(this, ComingMinistryListActivity::class.java))
+        }
 
     }
 }
