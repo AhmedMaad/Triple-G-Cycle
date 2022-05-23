@@ -74,7 +74,11 @@ class DayTimeActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
-        time = "$hourOfDay:$minute"
+        time =
+            if (hourOfDay < 10 && minute == 0) "0$hourOfDay:${minute}0"
+            else if (hourOfDay < 10) "0$hourOfDay:${minute}"
+            else if (minute == 0) "$hourOfDay:${minute}0"
+            else "$hourOfDay:${minute}"
         binding.timeTv.text = "Choose Time\n$time"
     }
 

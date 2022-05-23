@@ -8,6 +8,4 @@
     android:textColor="@color/green"
     android:textSize="24sp"
     android:textStyle="bold"
-    tools:text="Ministry of Health is coming on 19/5/2022 at 9:00">
-
-</TextView>
+    tools:text="Ministry of Health is coming on 19/5/2022 at 9:00" />

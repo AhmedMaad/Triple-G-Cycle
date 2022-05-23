@@ -37,15 +37,11 @@ class ComingMinistryListActivity : AppCompatActivity() {
             binding.lv.adapter = adapter
             binding.progress.visibility = View.GONE
 
-            if(approvedRequests.isEmpty())
+            if (approvedRequests.isEmpty())
                 Toast.makeText(this, "No one is coming at the moment", Toast.LENGTH_SHORT).show();
 
         }
 
-        //return "Approved" request and use "user_id"
-        //show in recycler view like that:
-        // "Ministry of health is coming on 19/5/2022 at 19:00 p.m."
-
-
     }
+
 }
