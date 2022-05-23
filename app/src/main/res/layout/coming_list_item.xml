@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:lineSpacingExtra="16dp"
+    android:lineSpacingExtra="8dp"
     android:padding="16dp"
     android:textColor="@color/green"
     android:textSize="24sp"

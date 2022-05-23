@@ -12,6 +12,8 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityDayTimeBinding
 import com.maad.triple_gcycle.request.Request
+import java.util.*
+import kotlin.collections.HashMap
 import kotlin.random.Random
 
 class DayTimeActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
@@ -58,8 +60,21 @@ class DayTimeActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     private fun sendMoney() {
-        val data = HashMap<String, Double>()
-        data["money"] = Random.nextDouble(1000.00, 2000.00) //until 1999.9999
+        val now = Calendar.getInstance()
+        val y = now.get(Calendar.YEAR)
+        val m = now.get(Calendar.MONTH) + 1
+        val d = now.get(Calendar.DAY_OF_MONTH)
+        val h = now.get(Calendar.HOUR_OF_DAY)
+        val min = now.get(Calendar.MINUTE)
+        val s = now.get(Calendar.SECOND)
+        val ms = now.get(Calendar.MILLISECOND)
+        val time = "Transaction Time: $d-$m-$y $h:$min:$s.$ms"
+
+        val data = HashMap<String, String>()
+        data["money"] = Random.nextDouble(1000.00, 2000.00).toString() //until 1999.9999
+        data["time"] = time
+        data["status"] = "Pending"
+
         db.collection("bank").add(data).addOnSuccessListener {
             Toast.makeText(this, "Request approved, and money sent to bank", Toast.LENGTH_SHORT)
                 .show()

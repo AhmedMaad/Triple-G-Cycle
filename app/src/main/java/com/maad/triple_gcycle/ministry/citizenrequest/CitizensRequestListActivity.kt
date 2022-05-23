@@ -12,6 +12,8 @@ import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.databinding.ActivityRequestListBinding
 import com.maad.triple_gcycle.request.Request
 import com.maad.triple_gcycle.ministry.RequestAdapter
+import java.util.*
+import kotlin.collections.HashMap
 import kotlin.random.Random
 
 class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClickListener {
@@ -53,8 +55,22 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
     }
 
     private fun sendMoney(position: Int) {
-        val data = HashMap<String, Double>()
-        data["money"] = Random.nextDouble(200.00, 1000.00) //until 999.9999
+
+        val now = Calendar.getInstance()
+        val y = now.get(Calendar.YEAR)
+        val m = now.get(Calendar.MONTH) + 1
+        val d = now.get(Calendar.DAY_OF_MONTH)
+        val h = now.get(Calendar.HOUR_OF_DAY)
+        val min = now.get(Calendar.MINUTE)
+        val s = now.get(Calendar.SECOND)
+        val ms = now.get(Calendar.MILLISECOND)
+        val time = "Transaction Time: $d-$m-$y $h:$min:$s.$ms"
+
+        val data = HashMap<String, String>()
+        data["money"] = Random.nextDouble(200.00, 1000.00).toString() //until 999.9999
+        data["time"] = time
+        data["status"] = "Pending"
+
         db.collection("bank").add(data).addOnSuccessListener {
             pendingRequests.removeAt(position)
             adapter.notifyItemRemoved(position)

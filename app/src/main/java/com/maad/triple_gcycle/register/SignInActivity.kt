@@ -9,6 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.maad.triple_gcycle.appprovider.AppProviderHomeActivity
+import com.maad.triple_gcycle.bank.BankHomeActivity
 import com.maad.triple_gcycle.databinding.ActivitySignInBinding
 import com.maad.triple_gcycle.ministry.MinistryHomeActivity
 import com.maad.triple_gcycle.citizen.CitizenHomeActivity
@@ -30,9 +31,9 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.signInBtn.setOnClickListener {
-            //val email = binding.emailEt.text.toString()
+            val email = binding.emailEt.text.toString()
             //val password = binding.passwordEt.text.toString()
-            val email = "health@gmail.com"
+            //val email = "c1@gmail.com"
             val password = "123456"
             if (email.isEmpty() || password.isEmpty())
                 Toast.makeText(this, "You forgot to fill the fields", Toast.LENGTH_SHORT).show()
@@ -87,7 +88,7 @@ class SignInActivity : AppCompatActivity() {
                         finishAffinity()
                     }
                     "Bank" -> {
-                        startActivity(Intent(this, MinistryHomeActivity::class.java))
+                        startActivity(Intent(this, BankHomeActivity::class.java))
                         finishAffinity()
                     }
                 }
