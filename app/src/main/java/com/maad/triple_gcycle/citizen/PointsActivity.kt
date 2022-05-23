@@ -46,7 +46,7 @@ class PointsActivity : AppCompatActivity() {
 
     }
 
-    fun textAnimation(counter: Int, duration: Int, text: TextView) {
+    private fun textAnimation(counter: Int, duration: Int, text: TextView) {
         val animator = ValueAnimator.ofInt(0, counter)
         animator.duration = duration.toLong()
         animator.addUpdateListener { animation -> text.text = animation.animatedValue.toString() }

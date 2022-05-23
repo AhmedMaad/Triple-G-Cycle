@@ -6,4 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".appprovider.AppProviderHomeActivity">
 
+    <ImageView
+        android:id="@+id/half_square_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/half_square"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_type_tv"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Provider"
+        app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
+        app:layout_constraintEnd_toEndOf="@id/half_square_iv"
+        app:layout_constraintStart_toStartOf="@id/half_square_iv"
+        app:layout_constraintTop_toTopOf="@id/half_square_iv" />
+
+    <TextView
+        android:id="@+id/balance_title"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Balance"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/approved_tv"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/balance_title"
+        app:layout_constraintStart_toStartOf="@id/balance_title"
+        app:layout_constraintTop_toBottomOf="@id/balance_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/currency_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Change Currency (USD)"
+        app:layout_constraintEnd_toEndOf="@id/balance_title"
+        app:layout_constraintStart_toStartOf="@id/balance_title"
+        app:layout_constraintTop_toBottomOf="@id/approved_tv" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

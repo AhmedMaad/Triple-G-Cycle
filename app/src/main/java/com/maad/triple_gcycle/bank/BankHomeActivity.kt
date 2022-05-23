@@ -24,8 +24,6 @@ class BankHomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         db = Firebase.firestore
 
-        //show in list view and clicking on the item sends money to app provider
-        //date and time with price
         db.collection("bank").get().addOnSuccessListener {
             val allTransactions = it.documents
             for (transaction in allTransactions)
