@@ -15,16 +15,33 @@
         android:src="@drawable/half_square"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/offers_tv"
-        style="@style/TextTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/v"
+        app:layout_constraintEnd_toEndOf="@id/v"
+        app:layout_constraintStart_toStartOf="@id/v" />
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
         app:layout_constraintBottom_toBottomOf="@id/half_square_iv"
         app:layout_constraintEnd_toEndOf="@id/half_square_iv"
         app:layout_constraintStart_toStartOf="@id/half_square_iv"
-        app:layout_constraintTop_toTopOf="@id/half_square_iv"
-        android:text="Offers" />
+        app:layout_constraintTop_toTopOf="@id/half_square_iv" />
+
+    <TextView
+        android:id="@+id/user_type_tv"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offers"
+        app:layout_constraintEnd_toEndOf="@id/v"
+        app:layout_constraintStart_toStartOf="@id/v"
+        app:layout_constraintTop_toBottomOf="@id/v" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/offers_rv"

@@ -7,5 +7,6 @@ class Citizen(
     id: String = "",
     email: String = "",
     userType: String = "",
-    profile: String = "",
-) : User(id, email, userType, profile)
+    name: String = "",
+    phoneNo: String = ""
+) : User(id, email, userType, name, phoneNo)

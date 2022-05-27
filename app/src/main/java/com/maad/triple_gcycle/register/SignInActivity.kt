@@ -32,9 +32,9 @@ class SignInActivity : AppCompatActivity() {
 
         binding.signInBtn.setOnClickListener {
             val email = binding.emailEt.text.toString()
-            //val password = binding.passwordEt.text.toString()
+            val password = binding.passwordEt.text.toString()
             //val email = "c1@gmail.com"
-            val password = "123456"
+            //val password = "123456"
             if (email.isEmpty() || password.isEmpty())
                 Toast.makeText(this, "You forgot to fill the fields", Toast.LENGTH_SHORT).show()
             else {

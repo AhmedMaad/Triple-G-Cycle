@@ -46,7 +46,7 @@
             android:name=".citizen.CitizenHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".register.WelcomeActivity"
+            android:name=".register.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".register.SignUpActivity"
@@ -61,7 +61,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".register.SignInActivity"
+            android:name=".register.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

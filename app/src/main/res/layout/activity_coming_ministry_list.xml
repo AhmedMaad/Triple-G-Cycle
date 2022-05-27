@@ -6,7 +6,7 @@
     tools:context=".factory.ComingMinistryListActivity">
 
     <ListView
-        android:divider="@color/green"
+        android:divider="@color/white"
         android:dividerHeight="8dp"
         android:id="@+id/lv"
         android:layout_width="wrap_content"

@@ -56,6 +56,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:text="Name"
+                    android:textColor="@color/green" />
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:text="Email"
                     android:textColor="@color/green" />
 
@@ -82,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Write Password Again"
+                    android:text="Retype Password"
                     android:textColor="@color/green" />
 
                 <EditText
@@ -90,6 +103,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Phone Number"
+                    android:textColor="@color/green" />
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -121,6 +147,24 @@
                         android:text="Factory" />
 
                 </RadioGroup>
+
+                <TextView
+                    android:id="@+id/type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Type"
+                    android:textColor="@color/green"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/type_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sign_up_btn"

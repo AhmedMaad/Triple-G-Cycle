@@ -33,15 +33,6 @@ class AppProviderHomeActivity : AppCompatActivity() {
             binding.approvedTv.text = accountBalance.toString()
         }
 
-        binding.currencySwitch.setOnCheckedChangeListener { _, isChecked ->
-            accountBalance =
-                when (isChecked) {
-                    true -> accountBalance * 18
-                    false -> accountBalance / 18
-                }
-            binding.approvedTv.text = ("%.2f".format(accountBalance).toDouble()).toString()
-        }
-
     }
 
 }
