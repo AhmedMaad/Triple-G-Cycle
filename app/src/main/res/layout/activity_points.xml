@@ -55,7 +55,7 @@
             style="@style/TextTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Approved Points"
+            android:text="Approved Requests"
             android:textColor="@color/green" />
 
         <TextView
@@ -81,7 +81,7 @@
             style="@style/TextTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rejected Points"
+            android:text="Rejected Requests"
             android:textColor="@android:color/holo_red_dark" />
 
         <TextView
@@ -107,7 +107,7 @@
             style="@style/TextTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pending Points"
+            android:text="Pending Requests"
             android:textColor="@android:color/darker_gray" />
 
         <TextView

@@ -37,10 +37,10 @@
         style="@style/TextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ministry of Environment"
         app:layout_constraintEnd_toEndOf="@id/v"
         app:layout_constraintStart_toStartOf="@id/v"
-        app:layout_constraintTop_toBottomOf="@id/v" />
+        app:layout_constraintTop_toBottomOf="@id/v"
+        tools:text="Ministry of Environment" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/citizen_request_cv"

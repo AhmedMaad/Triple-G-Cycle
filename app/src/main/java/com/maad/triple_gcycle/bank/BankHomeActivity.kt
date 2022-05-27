@@ -30,11 +30,12 @@ class BankHomeActivity : AppCompatActivity() {
                 if (transaction.getString("status") == "Pending") {
                     ids.add(transaction.id)
                     val time = transaction.getString("time")
+                    val date = transaction.getString("date")
                     val money = "%.2f".format(transaction.getString("money")!!.toDouble())
-                    pendingTransactions.add("$time $money L.E.")
+                    pendingTransactions.add("Transaction Date: $date\nTransaction Time: $time\nTransferred Money: $money L.E.")
                 }
 
-            val adapter = ArrayAdapter(this, R.layout.coming_list_item, pendingTransactions)
+            val adapter = ArrayAdapter(this, R.layout.bank_list_item, pendingTransactions)
             binding.lv.adapter = adapter
             binding.progress.visibility = View.GONE
 

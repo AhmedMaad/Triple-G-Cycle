@@ -64,11 +64,13 @@ class CitizensRequestListActivity : AppCompatActivity(), RequestAdapter.ItemClic
         val min = now.get(Calendar.MINUTE)
         val s = now.get(Calendar.SECOND)
         val ms = now.get(Calendar.MILLISECOND)
-        val time = "Transaction Time: $d-$m-$y $h:$min:$s.$ms"
+        val time = "$h:$min:$s.$ms"
+        val date = "$d-$m-$y"
 
         val data = HashMap<String, String>()
         data["money"] = Random.nextDouble(200.00, 1000.00).toString() //until 999.9999
         data["time"] = time
+        data["date"] = date
         data["status"] = "Pending"
 
         db.collection("bank").add(data).addOnSuccessListener {

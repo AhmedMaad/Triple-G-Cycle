@@ -25,12 +25,11 @@ class AppProviderHomeActivity : AppCompatActivity() {
             val allTransactions = it.documents
             for (transaction in allTransactions)
                 if (transaction.getString("status") == "Approved") {
-                    val money =
-                        ("%.2f".format(transaction.getString("money")!!.toDouble())).toDouble()
+                    val money = transaction.getString("money")!!.toDouble()
                     accountBalance += money
                 }
 
-            binding.approvedTv.text = accountBalance.toString()
+            binding.approvedTv.text = "%.2f".format(accountBalance)
         }
 
     }
