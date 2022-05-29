@@ -61,6 +61,7 @@
             android:padding="16dp">
 
             <ImageView
+                android:id="@+id/person_iv"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:src="@drawable/ic_person"
@@ -68,8 +69,93 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:id="@+id/person_view"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/person_iv"
+                app:layout_constraintEnd_toEndOf="@id/person_iv"
+                app:layout_constraintStart_toStartOf="@id/person_iv"
+                app:layout_constraintTop_toTopOf="@id/person_iv" />
 
+            <ImageView
+                android:id="@+id/border"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/person_view"
+                app:layout_constraintTop_toBottomOf="@id/person_iv" />
+
+            <TextView
+                android:id="@+id/your_points_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Your Points"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/border"
+                app:layout_constraintStart_toStartOf="@id/border"
+                app:layout_constraintTop_toTopOf="@id/border" />
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="16dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/coin"
+                app:layout_constraintEnd_toEndOf="@id/your_points_tv"
+                app:layout_constraintStart_toStartOf="@id/your_points_tv"
+                app:layout_constraintTop_toBottomOf="@id/your_points_tv"
+                tools:text="50" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/border"
+                tools:text="Name: Citizen User" />
+
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_tv"
+                tools:text="Email: xyz@gmail.com" />
+
+            <TextView
+                android:id="@+id/phone_number_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/email_tv"
+                tools:text="Phone number: 012554616" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
