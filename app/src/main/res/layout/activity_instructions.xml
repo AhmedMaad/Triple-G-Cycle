@@ -60,7 +60,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawablePadding="16dp"
             android:padding="16dp"
             android:text="@string/instructions"
             android:textColor="@color/white"
