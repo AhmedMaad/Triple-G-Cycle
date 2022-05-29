@@ -12,6 +12,7 @@
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_factory.xml" value="0.164" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_location.xml" value="0.2" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_login_bk.xml" value="0.1455" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_more.xml" value="0.2" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_offer.xml" value="0.164" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_person.xml" value="0.153" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/ic_point.xml" value="0.164" />
@@ -20,13 +21,16 @@
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/login_button_bk.xml" value="0.1455" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/login_shape_bk.xml" value="0.1455" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/drawable/square.xml" value="0.1605" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_about_us.xml" value="0.2" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_app_provider_home.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_bank_home.xml" value="0.15775972637879435" />
-        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_citizen_home.xml" value="0.15775972637879435" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_citizen_home.xml" value="0.25" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_coming_ministry_list.xml" value="0.15775972637879435" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_contact_us.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_day_time.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_factory_home.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_home.xml" value="0.1921875" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_instructions.xml" value="0.2" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_maps.xml" value="0.1921875" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/activity_ministry_home.xml" value="0.15775972637879435" />
@@ -45,6 +49,7 @@
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/offers_list_item.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/request_dialog.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/layout/request_list_item.xml" value="0.15775972637879435" />
+        <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/menu/more_menu.xml" value="0.15775972637879435" />
         <entry key="..\:/Work/Freelance/Triple-G Cycle/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.144" />
       </map>
     </option>

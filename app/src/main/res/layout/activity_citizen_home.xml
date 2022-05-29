@@ -74,8 +74,8 @@
         android:layout_width="300dp"
         android:layout_height="88dp"
         android:clickable="true"
-        app:cardBackgroundColor="@color/mid_green"
         android:focusable="true"
+        app:cardBackgroundColor="@color/mid_green"
         app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@id/offers_cv"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,5 +120,14 @@
             app:drawableStartCompat="@drawable/ic_offer" />
 
     </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/more_iv"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="@id/half_square_iv"
+        app:layout_constraintTop_toTopOf="@id/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

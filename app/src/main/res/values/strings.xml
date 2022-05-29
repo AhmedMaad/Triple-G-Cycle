@@ -4,4 +4,13 @@
     <string name="sign_in"><u>Sign in?</u></string>
     <string name="sign_up"><u>Sign Up?</u></string>
     <string name="show_location"><u>Show Location</u></string>
+    <string name="instructions">1- You have to take clear photos
+\n\n2- You have to determine the accurate location
+\n\n3- You have not to take photo for small garbage
+\n\n4- You have not to take any person photos
+\n\n5- For citizen "Your request should be accepted before receiving points"
+\n\n6- The picture sizes should be maximum 126KB
+    </string>
+
+    <string name="about_us">This Application is considered a revolution in changing the life of the environment and the entire human being and helping the community greatly in the cleanliness of the environment and enjoying a clean, safer and healthier life among people.</string>
 </resources>

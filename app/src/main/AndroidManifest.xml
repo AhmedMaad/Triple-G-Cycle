@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripleGCycle">
         <activity
+            android:name=".citizen.about.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.about.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.about.InstructionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.about.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".factory.ComingMinistryListActivity"
             android:exported="false" />
         <activity
